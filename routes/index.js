@@ -28,29 +28,31 @@ if(fName != "" && lName != "" && email != "" && conemail != "")
     var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if(regex.test(email))
     {
+      var print = 'First name: ' + fName + ', Last name: ' + lName + ', email: ' + email + ", has requested kool-aid.";
       //results.textContent = "Thank you! You will receive your kool-aid soon.";
       //handle info and send out
-      if(sendmail({
+      sendmail({
         from: 'no-reply@server.com',
         to: 'loganped01@gmail.com',
         subject: 'kool-aid order',
-        html: 'First name: ' + fName + ', Last name: ' + lName + ', email: ' + email
+        html: print
       }, function(err, reply) {
         console.log(err && err.stack);
         console.dir(reply);
-      })){res.redirect('/success');}
-      else {
-        res.redirect('/fail');
-      }
+      });
+
+      res.redirect('/success');
+
 
     }
     else {
-
+      res.redirect('/fail');
     }
   }
 
 }
 else {
+  res.redirect('/fail');
   //results.textContent = "Please fill in all boxes";
 }
 }
@@ -62,18 +64,18 @@ router.get('/', function(req, res, next){
 })
 
 router.post('/', function(req, res, next){
-//checkresults(req, res, next);
+checkresults(req, res, next);
 
-sendmail({
-  from: 'no-reply@server.com',
-  to: 'logan@loganpedersen.com',
-  subject: 'test',
-  html: 'THIS IS A TEST'
-}, function(err, reply) {
-  console.log(err && err.stack);
-  console.dir(reply);
-  res.redirect('fail');
-});
+// sendmail({
+//   from: 'no-reply@server.com',
+//   to: 'logan@loganpedersen.com',
+//   subject: 'test',
+//   html: 'THIS IS A TEST'
+// }, function(err, reply) {
+//   console.log(err && err.stack);
+//   console.dir(reply);
+//   res.redirect('fail');
+// });
 
 })
 
