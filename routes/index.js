@@ -22,7 +22,7 @@ if(fName != "" && lName != "" && email != "" && conemail != "")
 {
   if(email != conemail)
   {
-    //results.textContent = "Please enter same email for both boxes";
+    res.redirect('/fail');
   }
   else{
     var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
