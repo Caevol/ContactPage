@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var sendmail = require('sendmail');
+var sendmail = require('sendmail')();
+
+
 
 function checkresults(req, res, next)
 {
@@ -64,14 +66,14 @@ router.post('/', function(req, res, next){
 
 sendmail({
   from: 'no-reply@server.com',
-  to: 'loganped01@gmail.com',
+  to: 'logan@loganpedersen.com',
   subject: 'test',
   html: 'THIS IS A TEST'
 }, function(err, reply) {
   console.log(err && err.stack);
   console.dir(reply);
+  res.redirect('fail');
 });
-
 
 })
 
