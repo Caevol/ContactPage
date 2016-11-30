@@ -1,0 +1,106 @@
+body {
+  background-color: #53507E;
+  width: 1100px;
+}
+
+div#HoldOut{
+  width: 750px;
+  padding-left: 130px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-right: 100px;
+  margin-top: 10px;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-bottom: 90px;
+  background-color: white;
+  box-shadow: 0 0 100px rgba(255, 255, 255, .75);
+}
+div#HoldOut h1{
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #FF8ED8;
+  margin-bottom: 35px;
+}
+div#HoldOut h3{
+  font-family: serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #5C5C5C;
+  max-width: 480px;
+}
+div#MidSection{
+  padding-top: 107px;
+  padding-right: 7px;
+  margin-right: 64%;
+}
+
+div#Form{
+  margin-left: 80%;
+  margin-right: 0%;
+  width: 500px
+
+}
+div#Form input{
+  outline: none;
+  border-bottom: 2px solid white;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  height: 35px;
+  background: none;
+  font-family: serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  padding-left: 0;
+}
+
+
+div#Form input::-webkit-input-placeHolder{
+  color: #B1AEDE;
+}
+nav#help input{
+
+  margin-top: 40px;
+  width: 100%;
+
+}
+
+div#firstName{
+  width: 45%;
+  float: left;
+}
+div#lastName{
+  width: 45%;
+  float: right;
+}
+div#Form h1{
+
+  height: 60px;
+  padding: 20px 45px;
+
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(255, 142, 216, .75);
+  background: #FF8ED8;
+  margin-top: 40px;
+
+  color: white;
+  text-align: center;
+
+}
+div#Form h1 input{
+  position: absolute;
+  margin-top: -7px;
+  margin-left: -110px;
+  border-bottom: 0;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+
+}
+div#Form h1:hover{
+  box-shadow: 0 0 30px rgba(64, 61, 101, .75);
+  color: #403D65;
+}
